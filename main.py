@@ -51,12 +51,19 @@ sfl_num= []
 
 for i in range(0,len(sfl)):
   rnd = random.randint(0, len(sfl)-1)
+  while rnd in sfl_num:
+    rnd = random.randint(0, len(sfl)-1)
+  sfl_num.append(rnd)
+
+
+"""for i in range(0,len(sfl)):
+  rnd = random.randint(0, len(sfl)-1)
   if rnd in sfl_num:
     while rnd in sfl_num:
       rnd = random.randint(0, len(sfl)-1)
     sfl_num.append(rnd)
   else:
-    sfl_num.append(rnd)
+    sfl_num.append(rnd)"""
 
 
 for i in sfl_num:
